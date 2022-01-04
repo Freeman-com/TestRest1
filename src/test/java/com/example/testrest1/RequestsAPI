@@ -1,0 +1,8 @@
+Lists URLs:
+    (POST)
+ 1. http://localhost:8070/api/v1/auth/login
+ 2. http://localhost:8070/api/v1/auth/registration
+
+ for admin
+ (GET)
+ 3. http://localhost:8070/api/v1/admin/**
