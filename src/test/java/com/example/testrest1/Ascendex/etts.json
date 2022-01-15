@@ -1,0 +1,217 @@
+[
+  {
+    "code": 0,
+    "data": [
+      {
+        "asset": "USDC",
+        "totalBalance": "0.000017326",
+        "availableBalance": "0.000017326"
+      },
+      {
+        "asset": "USDT",
+        "totalBalance": "0.421447604",
+        "availableBalance": "0.421447604"
+      },
+      {
+        "asset": "BTC",
+        "totalBalance": "0.000000089",
+        "availableBalance": "0.000000089"
+      },
+      {
+        "asset": "ASD",
+        "totalBalance": "0.472710079",
+        "availableBalance": "0.472710079"
+      },
+      {
+        "asset": "USDP",
+        "totalBalance": "0.000013275",
+        "availableBalance": "0.000013275"
+      },
+      {
+        "asset": "ETH",
+        "totalBalance": "0.000000005",
+        "availableBalance": "0.000000005"
+      }
+    ]
+  },
+  {
+    "code": 0,
+    "data": [
+      {
+        "asset": "USDC",
+        "totalBalance": "0.000017326",
+        "availableBalance": "0.000017326"
+      },
+      {
+        "asset": "USDT",
+        "totalBalance": "0.421447604",
+        "availableBalance": "0.421447604"
+      },
+      {
+        "asset": "BTC",
+        "totalBalance": "0.000000089",
+        "availableBalance": "0.000000089"
+      },
+      {
+        "asset": "ASD",
+        "totalBalance": "0.472710079",
+        "availableBalance": "0.472710079"
+      },
+      {
+        "asset": "USDP",
+        "totalBalance": "0.000013275",
+        "availableBalance": "0.000013275"
+      },
+      {
+        "asset": "ETH",
+        "totalBalance": "0.000000005",
+        "availableBalance": "0.000000005"
+      }
+    ]
+  },
+  {
+    "code": 200001,
+    "message": "Unable to find User",
+    "reason": "AUTHENTICATION_FAILED"
+  },
+  {
+    "code": 0,
+    "data": [
+      {
+        "asset": "USDC",
+        "totalBalance": "0.000017326",
+        "availableBalance": "0.000017326"
+      },
+      {
+        "asset": "USDT",
+        "totalBalance": "0.421447604",
+        "availableBalance": "0.421447604"
+      },
+      {
+        "asset": "BTC",
+        "totalBalance": "0.000000089",
+        "availableBalance": "0.000000089"
+      },
+      {
+        "asset": "ASD",
+        "totalBalance": "0.472710079",
+        "availableBalance": "0.472710079"
+      },
+      {
+        "asset": "USDP",
+        "totalBalance": "0.000013275",
+        "availableBalance": "0.000013275"
+      },
+      {
+        "asset": "ETH",
+        "totalBalance": "0.000000005",
+        "availableBalance": "0.000000005"
+      }
+    ]
+  },
+  {
+    "code": 0,
+    "data": [
+      {
+        "asset": "USDC",
+        "totalBalance": "0.000017326",
+        "availableBalance": "0.000017326"
+      },
+      {
+        "asset": "USDT",
+        "totalBalance": "0.421447604",
+        "availableBalance": "0.421447604"
+      },
+      {
+        "asset": "BTC",
+        "totalBalance": "0.000000089",
+        "availableBalance": "0.000000089"
+      },
+      {
+        "asset": "ASD",
+        "totalBalance": "0.472710079",
+        "availableBalance": "0.472710079"
+      },
+      {
+        "asset": "USDP",
+        "totalBalance": "0.000013275",
+        "availableBalance": "0.000013275"
+      },
+      {
+        "asset": "ETH",
+        "totalBalance": "0.000000005",
+        "availableBalance": "0.000000005"
+      }
+    ]
+  },
+  {
+    "code": 200001,
+    "message": "Unable to find User",
+    "reason": "AUTHENTICATION_FAILED"
+  },
+  {
+    "code": 200001,
+    "message": "Unable to find User",
+    "reason": "AUTHENTICATION_FAILED"
+  },
+  {
+    "code": 200001,
+    "message": "Unable to find User",
+    "reason": "AUTHENTICATION_FAILED"
+  },
+  {
+    "code": 0,
+    "data": [
+      {
+        "asset": "USDC",
+        "totalBalance": "0.002316301",
+        "availableBalance": "0.002316301"
+      },
+      {
+        "asset": "IOST",
+        "totalBalance": "0.000000012",
+        "availableBalance": "0.000000012"
+      },
+      {
+        "asset": "USDT",
+        "totalBalance": "3.013237427",
+        "availableBalance": "3.013237427"
+      },
+      {
+        "asset": "BTC",
+        "totalBalance": "0.000006834",
+        "availableBalance": "0.000006834"
+      },
+      {
+        "asset": "BTMXC",
+        "totalBalance": "581.595902032",
+        "availableBalance": "581.595902032"
+      },
+      {
+        "asset": "ASD",
+        "totalBalance": "0.000020348",
+        "availableBalance": "0.000020348"
+      },
+      {
+        "asset": "ASDP",
+        "totalBalance": "0.000021883",
+        "availableBalance": "0.000021883"
+      },
+      {
+        "asset": "USDP",
+        "totalBalance": "0.001934782",
+        "availableBalance": "0.001934782"
+      },
+      {
+        "asset": "ETH",
+        "totalBalance": "0.000000057",
+        "availableBalance": "0.000000057"
+      },
+      {
+        "asset": "ONG",
+        "totalBalance": "0.00000009",
+        "availableBalance": "0.00000009"
+      }
+    ]
+  }
+]
