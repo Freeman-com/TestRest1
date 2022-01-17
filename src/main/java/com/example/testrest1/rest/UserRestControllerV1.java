@@ -67,28 +67,25 @@ public class UserRestControllerV1 {
         List<Integer> groupList = new ArrayList<>();
 
         var keyList = ascendexRepository.findByUsersId(user.getId());
-        Map<Object, Object> hashMap = new HashMap<>();
 
-        for (var z : keyList) {
-            hashMap.put(z.getApiKey(), z.getSecret());
+        Set<Object> set = new HashSet<>();
 
+        for (var j : keyList) {
+            list.add(new AscendexConnectorTest().senderMethod(j.getApiKey(), j.getSecret(), j.getGroup()));
         }
 
-        for (Map.Entry<Object, Object> entry : hashMap.entrySet()) {
 
-            list.add(new AscendexConnectorTest().senderMethod((String) entry.getKey(), (String) entry.getValue(), 3));
-
-        }
         return String.valueOf(list);
     }
 }
-
-
-
-
-
-
-
-
-
-
+//        Map<Object, Object> hashMap = new HashMap<>();
+//
+//        for (var z : keyList) {
+//            hashMap.put(z.getApiKey(), z.getSecret());
+//
+//        }
+//        for (Map.Entry<Object, Object> entry : hashMap.entrySet()) {
+//
+//            list.add(new AscendexConnectorTest().senderMethod((String) entry.getKey(), (String) entry.getValue(), 3));
+//
+//        }
