@@ -3,13 +3,11 @@ package com.example.testrest1.model.exchanges;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
-@Table(name = "ascendex")
+@Table(name = "binance")
 @Data
-public class Ascendex implements Serializable {
-
+public class Binance {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +21,6 @@ public class Ascendex implements Serializable {
 
     @Column(name = "user_id")
     private long usersId;
-
-    @Column(name = "group")
-    public int group;
 
     @Column(name = "email")
     public String email;

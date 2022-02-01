@@ -9,21 +9,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.Base64;
-import java.util.List;
 
 public class AscendexConnectorTest {
 
-    long timesamp = System.currentTimeMillis();
     String path = "balance";
-    String msg = timesamp + "+" + path;
 
     public String senderMethod(String apiKey, String secret, int group) throws IOException, InterruptedException {
 
-
-
         long timesamp = System.currentTimeMillis();
         String msg = timesamp + path;
-        String result = encode(msg, String.valueOf(secret));
+        String result = encode(msg, secret);
 
         HttpClient client = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
@@ -32,11 +27,11 @@ public class AscendexConnectorTest {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://ascendex.com/" + group + "/api/pro/v1/cash/" + path))
 
-                .timeout(Duration.ofMinutes(1))
+                .timeout(Duration.ofMinutes(2))
                 .header("Accept", "application/json")
                 .header("Content-Type", "application/json")
-                .header("x-auth-key", String.valueOf(apiKey))
-                .header("x-auth-signature", String.valueOf(result))
+                .header("x-auth-key", apiKey)
+                .header("x-auth-signature", result)
                 .header("x-auth-timestamp", String.valueOf(timesamp))
                 .GET()
                 .build();
@@ -46,6 +41,7 @@ public class AscendexConnectorTest {
 
         return response.body();
     }
+
     public static String encode(String message, String secret) {
         try {
             Mac sha256_HMAC = Mac.getInstance("HmacSHA256");

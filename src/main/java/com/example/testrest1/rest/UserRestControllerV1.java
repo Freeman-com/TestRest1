@@ -1,20 +1,21 @@
 package com.example.testrest1.rest;
 
+import com.binance.connector.client.impl.SpotClientImpl;
+import com.example.testrest1.config.PrivateConfig;
 import com.example.testrest1.connections.AscendexConnectorTest;
 import com.example.testrest1.model.User;
 import com.example.testrest1.repository.AscendexRepository;
+import com.example.testrest1.repository.BinanceRepository;
 import com.example.testrest1.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 import java.util.*;
 
 @RestController
@@ -23,14 +24,18 @@ public class UserRestControllerV1 {
 
     private final UserRepository userRepository;
     private final AscendexRepository ascendexRepository;
+    private final BinanceRepository binanceRepository;
+
+    private static final Logger logger = LoggerFactory.getLogger(UserRestControllerV1.class);
 
     @Autowired
-    public UserRestControllerV1(UserRepository userRepository, AscendexRepository ascendexRepository) {
+    public UserRestControllerV1(UserRepository userRepository, AscendexRepository ascendexRepository, BinanceRepository binanceRepository) {
         this.userRepository = userRepository;
         this.ascendexRepository = ascendexRepository;
+        this.binanceRepository = binanceRepository;
     }
 
-    @GetMapping(value = "{email}")
+    @PostMapping(value = "{email}")
     public ResponseEntity<User> getUserByEmail(@PathVariable(name = "email") String email) {
         User user = userRepository.findByEmail(email);
 
@@ -55,29 +60,44 @@ public class UserRestControllerV1 {
 
 //        user1.setRoles(new ArrayList<>(user.getRoles()));
 //        user1.setRoles(user.getRoles());  RECURSION (STACKOVERFLOW)
+
         return new ResponseEntity<>(user1, HttpStatus.OK);
     }
 
     @GetMapping(value = "maintable/{email}")
-    public String getTableByUser(@PathVariable(name = "email") String email) throws IOException, InterruptedException {
+    public String getTableByUser(@PathVariable(name = "email") String email) throws Exception {
 
         User user = userRepository.findByEmail(email);
-
         List<String> list = new ArrayList<>();
-        List<Integer> groupList = new ArrayList<>();
 
         var keyList = ascendexRepository.findByUsersId(user.getId());
-
-        Set<Object> set = new HashSet<>();
+        var keyList2 = binanceRepository.findByUsersId(user.getId());
 
         for (var j : keyList) {
             list.add(new AscendexConnectorTest().senderMethod(j.getApiKey(), j.getSecret(), j.getGroup()));
         }
 
+        /* Account Snapshot - Binance */
+        LinkedHashMap<String,Object> parameters = new LinkedHashMap<>();
+        parameters.put("type", "SPOT");
+
+        for (var s : keyList2) {
+            SpotClientImpl client = new SpotClientImpl(s.getApiKey(), s.getSecret());
+            String result = client.createWallet().accountSnapshot(parameters);
+            list.add(result);
+        }
+        /* END  Account Snapshot - Binance */
+
+
 
         return String.valueOf(list);
     }
 }
+
+//            ObjectMapper d = new ObjectMapper();
+//            var map = d.readValue(x, Map.class);
+//            map.put("email", j.getEmail());
+
 //        Map<Object, Object> hashMap = new HashMap<>();
 //
 //        for (var z : keyList) {

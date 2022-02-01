@@ -6,3 +6,16 @@ Lists URLs:
  for admin
  (GET)
  3. http://localhost:8070/api/v1/admin/**
+
+
+ CREATE USER 'root'@'localhost' IDENTIFIED WITH authentication_plugin BY '3873725';
+ CREATE USER 'root'@'localhost' IDENTIFIED BY '3873725';
+
+ ALTER USER 'anthony'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Raziel3873725!';
+
+
+GRANT PRIVILEGE ON database.table TO 'anthony'@'localhost';
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'anthony'@'localhost' WITH GRANT OPTION;
+

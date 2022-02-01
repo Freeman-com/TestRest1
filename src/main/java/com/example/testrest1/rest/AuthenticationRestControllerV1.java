@@ -1,8 +1,10 @@
 package com.example.testrest1.rest;
 
+import com.example.testrest1.dto.UserDTO;
 import com.example.testrest1.model.Status;
 import com.example.testrest1.model.User;
 import com.example.testrest1.repository.UserRepository;
+import com.example.testrest1.rest.validation.ValidEmail;
 import com.example.testrest1.security.JwtTokenProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -74,4 +77,10 @@ public class AuthenticationRestControllerV1 {
         user.setUpdated(now);
         return userRepository.save(user);
     }
+
+    @PostMapping("registrations")
+    public UserDTO registrationSecondMethod (@RequestBody @Valid final UserDTO userDTO) {
+        return null;
+    }
+
 }
