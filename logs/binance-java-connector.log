@@ -1,0 +1,26 @@
+2022-02-05 05:56:25.830[1644029785830] | INFO  | main       | c.e.testrest1.TestRest1Application   - Starting TestRest1Application using Java 17.0.1 on tony-Latitude-E5570 with PID 20652 (/home/tony/IdeaProjects/TestRest1/target/classes started by tony in /home/tony/IdeaProjects/TestRest1)
+2022-02-05 05:56:25.832[1644029785832] | INFO  | main       | c.e.testrest1.TestRest1Application   - No active profile set, falling back to default profiles: default
+2022-02-05 05:56:26.380[1644029786380] | INFO  | main       | o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-05 05:56:26.428[1644029786428] | INFO  | main       | o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2022-02-05 05:56:26.808[1644029786808] | INFO  | main       | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat initialized with port(s): 8070 (http)
+2022-02-05 05:56:26.815[1644029786815] | INFO  | main       | o.a.coyote.http11.Http11NioProtocol  - Initializing ProtocolHandler ["http-nio-8070"]
+2022-02-05 05:56:26.815[1644029786815] | INFO  | main       | o.a.catalina.core.StandardService    - Starting service [Tomcat]
+2022-02-05 05:56:26.815[1644029786815] | INFO  | main       | o.a.catalina.core.StandardEngine     - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-05 05:56:26.904[1644029786904] | INFO  | main       | o.a.c.c.C.[Tomcat].[localhost].[/]   - Initializing Spring embedded WebApplicationContext
+2022-02-05 05:56:26.904[1644029786904] | INFO  | main       | o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1039 ms
+2022-02-05 05:56:27.693[1644029787693] | INFO  | main       | liquibase.lockservice                - Successfully acquired change log lock
+2022-02-05 05:56:27.976[1644029787976] | INFO  | main       | liquibase.changelog                  - Reading from db1.DATABASECHANGELOG
+2022-02-05 05:56:28.063[1644029788063] | INFO  | main       | liquibase.lockservice                - Successfully released change log lock
+2022-02-05 05:56:28.111[1644029788111] | INFO  | main       | com.zaxxer.hikari.HikariDataSource   - HikariPool-1 - Starting...
+2022-02-05 05:56:28.136[1644029788136] | INFO  | main       | com.zaxxer.hikari.HikariDataSource   - HikariPool-1 - Start completed.
+2022-02-05 05:56:28.167[1644029788167] | INFO  | main       | o.h.jpa.internal.util.LogHelper      - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-05 05:56:28.196[1644029788196] | INFO  | main       | org.hibernate.Version                - HHH000412: Hibernate ORM core version 5.6.3.Final
+2022-02-05 05:56:28.345[1644029788345] | INFO  | main       | o.h.annotations.common.Version       - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-05 05:56:28.416[1644029788416] | INFO  | main       | org.hibernate.dialect.Dialect        - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-02-05 05:56:28.789[1644029788789] | INFO  | main       | o.h.e.t.j.p.i.JtaPlatformInitiator   - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-05 05:56:28.795[1644029788795] | INFO  | main       | o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-05 05:56:29.017[1644029789017] | WARN  | main       | o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-05 05:56:29.425[1644029789425] | INFO  | main       | o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5afaae7e, org.springframework.security.web.context.SecurityContextPersistenceFilter@44f88149, org.springframework.security.web.header.HeaderWriterFilter@528ef230, org.springframework.security.web.authentication.logout.LogoutFilter@6a9a6a0c, com.example.testrest1.security.JwtTokenFilter@7364073b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4199761d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6da86e98, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50331591, org.springframework.security.web.session.SessionManagementFilter@6fb2b972, org.springframework.security.web.access.ExceptionTranslationFilter@452d6fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f627a1a]
+2022-02-05 05:56:29.455[1644029789455] | INFO  | main       | o.a.coyote.http11.Http11NioProtocol  - Starting ProtocolHandler ["http-nio-8070"]
+2022-02-05 05:56:29.463[1644029789463] | INFO  | main       | o.s.b.w.e.tomcat.TomcatWebServer     - Tomcat started on port(s): 8070 (http) with context path ''
+2022-02-05 05:56:29.472[1644029789472] | INFO  | main       | c.e.testrest1.TestRest1Application   - Started TestRest1Application in 4.031 seconds (JVM running for 5.272)
