@@ -1,20 +1,103 @@
 package com.example.testrest1.rest;
 
+import java.util.List;
+
+@lombok.Data
 public class Model {
 
-    String balance;
+    private List<SnapshotVos> snapshotVos;
+    private int code;
+    private String msg;
 
-    public String getBalance() {
-        return balance;
+    public List<SnapshotVos> getSnapshotVos() {
+        return snapshotVos;
     }
 
-    public void setBalance(String balance) {
-        this.balance = balance;
+    public void setSnapshotVos(List<SnapshotVos> snapshotVos) {
+        this.snapshotVos = snapshotVos;
     }
 
-    String asset;
-    String totalBalance;
-    String availableBalance;
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+}
+
+class SnapshotVos {
+    private String type;
+    private Long updateTime;
+    private List<String> data;
+
+    public SnapshotVos() {
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Long getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Long updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public List<String> getData() {
+        return data;
+    }
+
+    public void setData(List<String> data) {
+        this.data = data;
+    }
+}
+
+class Data {
+    private String totalAssetOfBtc;
+    private List<Balance> balances;
+
+    public Data() {
+    }
+
+    public String getTotalAssetOfBtc() {
+        return totalAssetOfBtc;
+    }
+
+    public void setTotalAssetOfBtc(String totalAssetOfBtc) {
+        this.totalAssetOfBtc = totalAssetOfBtc;
+    }
+
+    public List<Balance> getBalances() {
+        return balances;
+    }
+
+    public void setBalances(List<Balance> balances) {
+        this.balances = balances;
+    }
+}
+
+class Balance {
+    private String asset;
+    private String free;
+    private String locked;
+
+    public Balance() {
+    }
 
     public String getAsset() {
         return asset;
@@ -24,19 +107,19 @@ public class Model {
         this.asset = asset;
     }
 
-    public String getTotalBalance() {
-        return totalBalance;
+    public String getFree() {
+        return free;
     }
 
-    public void setTotalBalance(String totalBalance) {
-        this.totalBalance = totalBalance;
+    public void setFree(String free) {
+        this.free = free;
     }
 
-    public String getAvailableBalance() {
-        return availableBalance;
+    public String getLocked() {
+        return locked;
     }
 
-    public void setAvailableBalance(String availableBalance) {
-        this.availableBalance = availableBalance;
+    public void setLocked(String locked) {
+        this.locked = locked;
     }
 }
