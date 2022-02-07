@@ -1,164 +1,255 @@
-{
-  "code": 200,
-  "msg": "",
-  "snapshotVos": [
-    {
-      "type": "spot",
-      "updateTime": 1643155199000,
-      "data": {
-        "totalAssetOfBtc": "0.00027247",
-        "balances": [
-          {
-            "asset": "BNB",
-            "free": "0.02619646",
-            "locked": "0"
-          },
-          {
-            "asset": "ETH",
-            "free": "0",
-            "locked": "0"
-          },
-          {
-            "asset": "USDT",
-            "free": "0",
-            "locked": "0"
-          }
-        ]
+
+[
+  {
+    "code": 200,
+    "msg": "",
+    "snapshotVos": [
+      {
+        "type": "spot",
+        "updateTime": 1643500799000,
+        "data": {
+          "totalAssetOfBtc": "0.00026972",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643587199000,
+        "data": {
+          "totalAssetOfBtc": "0.00026875",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643673599000,
+        "data": {
+          "totalAssetOfBtc": "0.00026628",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643759999000,
+        "data": {
+          "totalAssetOfBtc": "0.00026388",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643846399000,
+        "data": {
+          "totalAssetOfBtc": "0.00027669",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
       }
-    },
-    {
-      "type": "spot",
-      "updateTime": 1643241599000,
-      "data": {
-        "totalAssetOfBtc": "0.00027795",
-        "balances": [
-          {
-            "asset": "BNB",
-            "free": "0.00017697",
-            "locked": "0"
-          },
-          {
-            "asset": "ETH",
-            "free": "0",
-            "locked": "0"
-          },
-          {
-            "asset": "USDT",
-            "free": "10.1634",
-            "locked": "0"
-          }
-        ]
+    ]
+  },
+  {
+    "code": 200,
+    "msg": "",
+    "snapshotVos": [
+      {
+        "type": "spot",
+        "updateTime": 1643500799000,
+        "data": {
+          "totalAssetOfBtc": "0.00026972",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643587199000,
+        "data": {
+          "totalAssetOfBtc": "0.00026875",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643673599000,
+        "data": {
+          "totalAssetOfBtc": "0.00026628",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643759999000,
+        "data": {
+          "totalAssetOfBtc": "0.00026388",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
+      },
+      {
+        "type": "spot",
+        "updateTime": 1643846399000,
+        "data": {
+          "totalAssetOfBtc": "0.00027669",
+          "balances": [
+            {
+              "asset": "BNB",
+              "free": "0.00017697",
+              "locked": "0"
+            },
+            {
+              "asset": "ETH",
+              "free": "0",
+              "locked": "0"
+            },
+            {
+              "asset": "USDT",
+              "free": "10.1634",
+              "locked": "0"
+            }
+          ]
+        }
       }
-    },
-    {
-      "type": "spot",
-      "updateTime": 1643327999000,
-      "data": {
-        "totalAssetOfBtc": "0.0002776",
-        "balances": [
-          {
-            "asset": "BNB",
-            "free": "0.00017697",
-            "locked": "0"
-          },
-          {
-            "asset": "ETH",
-            "free": "0",
-            "locked": "0"
-          },
-          {
-            "asset": "USDT",
-            "free": "10.1634",
-            "locked": "0"
-          }
-        ]
-      }
-    },
-    {
-      "type": "spot",
-      "updateTime": 1643414399000,
-      "data": {
-        "totalAssetOfBtc": "0.00027114",
-        "balances": [
-          {
-            "asset": "BNB",
-            "free": "0.00017697",
-            "locked": "0"
-          },
-          {
-            "asset": "ETH",
-            "free": "0",
-            "locked": "0"
-          },
-          {
-            "asset": "USDT",
-            "free": "10.1634",
-            "locked": "0"
-          }
-        ]
-      }
-    },
-    {
-      "type": "spot",
-      "updateTime": 1643500799000,
-      "data": {
-        "totalAssetOfBtc": "0.00026972",
-        "balances": [
-          {
-            "asset": "BNB",
-            "free": "0.00017697",
-            "locked": "0"
-          },
-          {
-            "asset": "ETH",
-            "free": "0",
-            "locked": "0"
-          },
-          {
-            "asset": "USDT",
-            "free": "10.1634",
-            "locked": "0"
-          }
-        ]
-      }
-    },
-    {
-      "type": "spot",
-      "updateTime": 1643587199000,
-      "data": {
-        "totalAssetOfBtc": "0.00026875",
-        "balances": [
-          {
-            "asset": "BNB",
-            "free": "0.00017697",
-            "locked": "0"
-          },
-          {
-            "asset": "ETH",
-            "free": "0",
-            "locked": "0"
-          },
-          {
-            "asset": "USDT",
-            "free": "10.1634",
-            "locked": "0"
-          }
-        ]
-      }
-    },
-    {
-      "type": "spot",
-      "updateTime": 1643673599000,
-      "data": {
-        "totalAssetOfBtc": "0",
-        "balances": [
-          {
-            "asset": "ETH",
-            "free": "0",
-            "locked": "0"
-          }
-        ]
-      }
-    }
-  ]
-}
+    ]
+  }
+]

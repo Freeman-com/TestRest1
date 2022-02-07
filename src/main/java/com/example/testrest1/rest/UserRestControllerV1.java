@@ -3,13 +3,14 @@ package com.example.testrest1.rest;
 import com.binance.connector.client.impl.SpotClientImpl;
 import com.example.testrest1.connections.AscendexConnectorTest;
 import com.example.testrest1.model.User;
+import com.example.testrest1.model.exchanges.Binance;
 import com.example.testrest1.repository.AscendexRepository;
 import com.example.testrest1.repository.BinanceRepository;
 import com.example.testrest1.repository.UserRepository;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.JsonArray;
 import com.google.gson.reflect.TypeToken;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -22,14 +23,16 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.io.*;
 import java.lang.reflect.Type;
-import java.math.BigDecimal;
 import java.util.*;
 
 @RestController
 @RequestMapping(value = "/api/v1/user/")
 public class UserRestControllerV1 {
+
+    public static final String JSON_PATH = "src/main/resources/jsons/buffer.json";
 
     private final UserRepository userRepository;
     private final AscendexRepository ascendexRepository;
@@ -78,7 +81,8 @@ public class UserRestControllerV1 {
 
         AscendexConnectorTest ascendexConnectorTest = new AscendexConnectorTest();
         User user = userRepository.findByEmail(email);
-        List<String> list = new ArrayList<>();
+        ObjectMapper objectMapper = new ObjectMapper();
+        Gson gson = new Gson();
 
 
         var keyList = ascendexRepository.findByUsersId(user.getId());
@@ -88,35 +92,57 @@ public class UserRestControllerV1 {
             var x = ascendexConnectorTest.senderMethod(j.getApiKey(), j.getSecret(), j.getGroup());
         }
 
-
         /* Account Snapshot - Binance */
+
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("type", "SPOT");
 
-        for (var s : keyList2) {
-            SpotClientImpl client = new SpotClientImpl(s.getApiKey(), s.getSecret());
+        List<String> test = new ArrayList<>();
+        Model model = new Model();
+        JSONObject object = new JSONObject();
+
+        for (var e : keyList2) {
+            SpotClientImpl client = new SpotClientImpl(e.getApiKey(), e.getSecret());
             String result = client.createWallet().accountSnapshot(parameters);
 
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<Model>>() {
-            }.getType();
-            List<Model> c = gson.fromJson(result, type);
-            List<Object> strings = new ArrayList<>();
-            for (var x : c) {
-                strings.add(x.balance);
-                strings.add(x.asset);
-                strings.add(x.availableBalance);
-            }
-            list.add(result);
+            var c = objectMapper.readValue(result, Model[].class);
 
+            for (var f : c) {
+                test.add(String.valueOf(f.getSnapshotVos()));
+            }
+//            test.add(String.valueOf(c.getCode()));
+//            test.add(String.valueOf(c.getSnapshotVos()));
+
+            if (!result.isEmpty()) {
+                try {
+                    objectMapper.writeValue(new File(
+                            "/home/tony/IdeaProjects/TestRest1/src/main/resources/jsons/buffer.json"), test);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
         }
+
         /* END  Account Snapshot - Binance */
 
-        return String.valueOf(list);
+        return String.valueOf(test);
     }
-
-
 }
+
+//    Gson gson = new Gson();
+//    Type type = new TypeToken<List<Model>>() {
+//    }.getType();
+//    List<Model> c = gson.fromJson(String.valueOf(list1), type);
+//    List<String> strings = new ArrayList<>();
+//        for (var x : c) {
+//                strings.add(x.getBalances());
+//                strings.add(x.getAsset());
+//                strings.add(x.getAvailableBalance());
+//                }
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+
 
 //            ObjectMapper d = new ObjectMapper();
 //            var map = d.readValue(x, Map.class);
