@@ -13,8 +13,6 @@ import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +33,7 @@ public class UserRestControllerV1 {
     private final AscendexRepository ascendexRepository;
     private final BinanceRepository binanceRepository;
 
-    private static final Logger logger = LoggerFactory.getLogger(UserRestControllerV1.class);
+//    private static final Logger logger = LoggerFactory.getLogger(UserRestControllerV1.class);
 
     @Autowired
     public UserRestControllerV1(UserRepository userRepository, AscendexRepository ascendexRepository, BinanceRepository binanceRepository) {

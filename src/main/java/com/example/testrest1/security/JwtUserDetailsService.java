@@ -2,7 +2,7 @@ package com.example.testrest1.security;
 
 import com.example.testrest1.model.User;
 import com.example.testrest1.repository.UserRepository;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-@Slf4j
+
 public class JwtUserDetailsService implements UserDetailsService {
 
     private final UserRepository userRepository;
@@ -29,7 +29,7 @@ public class JwtUserDetailsService implements UserDetailsService {
         }
 
         JwtUser jwtUser = JwtUserFactory.create(user);
-        log.info("IN loadUserByUsername - user with email: {} successfully loaded", email);
+//        log.info("IN loadUserByUsername - user with email: {} successfully loaded", email);
         return jwtUser;
     }
 }

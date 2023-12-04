@@ -6,7 +6,7 @@ import com.example.testrest1.model.User;
 import com.example.testrest1.repository.UserRepository;
 import com.example.testrest1.rest.validation.ValidEmail;
 import com.example.testrest1.security.JwtTokenProvider;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,7 +25,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/api/v1/auth/")
-@Slf4j
+
 public class AuthenticationRestControllerV1 {
 
     private final AuthenticationManager authenticationManager;

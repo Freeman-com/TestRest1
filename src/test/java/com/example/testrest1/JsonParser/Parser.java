@@ -5,8 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -19,11 +18,11 @@ import java.lang.reflect.Type;
 
 public class Parser {
 
-    private static final Logger logger = LoggerFactory.getLogger(Parser.class);
+//    private static final Logger logger = LoggerFactory.getLogger(Parser.class);
     public static final String JSON_PATH = "src/test/java/com/example/testrest1/JsonParser/Ascendex.json";
 
     public static void main(String[] args) throws FileNotFoundException, ParseException {
-        logger.info(qwerty().toString());
+//        logger.info(qwerty().toString());
     }
 
     public static Map<List<String>, List<String>> qwerty() throws FileNotFoundException, ParseException {
