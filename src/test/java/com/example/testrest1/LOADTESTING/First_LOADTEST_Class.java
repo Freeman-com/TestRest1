@@ -46,9 +46,6 @@ public class First_LOADTEST_Class {
     public static String POST_USER_INFO = "/api/v1/user/{email}"; // for yourself or admin
     private static long idCounter = 5;
 
-
-
-
     public static <T> T doPost (String path, Class class1) {
 
         HttpClient client = HttpClient.newBuilder()

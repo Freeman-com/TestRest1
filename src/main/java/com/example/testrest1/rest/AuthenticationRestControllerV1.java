@@ -68,16 +68,11 @@ public class AuthenticationRestControllerV1 {
         }
     }
 
-    private static long idCounter = 1;
     @PostMapping("registration")
     public User registration(@RequestBody User user) {
         Date now = new Date();
-        long id = Long.parseLong(String.valueOf(idCounter++));
         user.setStatus(Status.ACTIVE);
-        user.setId(id);
         user.setUsername(user.getUsername());
-        user.setFirstName(user.getFirstName());
-        user.setLastName(user.getLastName());
         user.setEmail(user.getEmail());
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setCreated(now);
